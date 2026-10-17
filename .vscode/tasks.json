@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "detail": "cmake --build --preset debug  (Ninja + arm-none-eabi-gcc)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "--preset",
+                "debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "configure",
+            "detail": "cmake --preset debug",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset",
+                "debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "detail": "删除 build 目录（改 CMakeLists 的 option/set 后必须这样做）",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-E",
+                "rm",
+                "-rf",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试 (CMSIS-DAP / OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/STM32F407CB.elf",
+            "servertype": "openocd",
+            "serverpath": "D:/STM32Toolchain/openocd/bin/openocd.exe",
+            "device": "STM32F407IG",
+            "interface": "swd",
+            "searchDir": [
+                "D:/STM32Toolchain/openocd/openocd/scripts"
+            ],
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "openOCDLaunchCommands": [
+                "adapter speed 4000"
+            ],
+            "svdFile": "${workspaceFolder}/STM32F407IG.svd",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "preLaunchTask": "build"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+# 构建产物
+/build/
+build/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeUserPresets.json
+compile_commands.json
+
+# 调试器工程文件（各人本地保留，不入库）
+*.jdebug
+*.jdebug.user
+
+# CubeMX
+.mxproject
+*.ioc.bak
+
+# 编辑器 / 系统
+.vscode/settings.json
+.DS_Store
+Thumbs.db
+
+# 编译中间产物
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+*.map
+*.list
